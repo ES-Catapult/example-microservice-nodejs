@@ -1,0 +1,24 @@
+version: '2.1'
+services:
+
+  lint:
+    extends:
+      service: npm
+    command: run lint
+
+  unit-test:
+    extends:
+      service: npm
+    command: run test:unit
+
+  component-test:
+    extends:
+      service: npm
+    command: run test:component
+    env_file: .env.component
+
+  # build:
+  #   extends:
+  #     service: npm
+  #   command: run build
+

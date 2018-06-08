@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+
+  node:
+    image: risingstack/alpine:3.3-v6.2.0-3.6.0
+    volumes:
+      - .:/usr/src/node-app:z
+    working_dir: /usr/src/node-app
+
+  npm:
+    extends:
+      service: node
+    entrypoint: npm

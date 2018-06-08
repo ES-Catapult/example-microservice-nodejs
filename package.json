@@ -1,0 +1,44 @@
+{
+  "name": "devops-playground",
+  "version": "3.0.1",
+  "engines": {
+    "node": "6.2.0"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.gateway.energy/repository/npm-internal/"
+  },
+  "description": "A scratch project for Jenkins",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test:unit": "istanbul cover --dir ./coverage/unit tape  test/unit/**/**/*.spec.js",
+    "test:component": "istanbul cover --dir ./coverage/component tape test/component/**/*.spec.js",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix src/**/*.js"
+  },
+  "author": "Deyna Cegielski",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "6.9.0",
+    "babel-eslint": "6.0.4",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-stage-0": "6.5.0",
+    "eslint": "2.11.1",
+    "eslint-config-airbnb-base": "3.0.1",
+    "eslint-plugin-import": "1.8.1",
+    "istanbul": "0.4.3",
+    "nock": "8.0.0",
+    "nsp": "^2.6.1",
+    "proxyquire": "1.7.10",
+    "sinon": "1.17.4",
+    "sinon-as-promised": "4.0.0",
+    "supertest": "1.2.0",
+    "tape": "4.6.0"
+  },
+  "dependencies": {
+    "body-parser": "1.15.1",
+    "dotenv": "2.0.0",
+    "express": "4.14.0",
+    "prom-client": "^10.0.2"
+  }
+}
