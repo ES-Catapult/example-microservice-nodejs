@@ -9,7 +9,7 @@ COPY src/ src/
 COPY index.js index.js
 COPY server.js server.js
 
-ENV PORT=80
-EXPOSE 80
+ENV PORT=8080
+EXPOSE 8080
 
 CMD ["npm","start"]
