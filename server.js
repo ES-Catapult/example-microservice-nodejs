@@ -27,6 +27,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+app.get(`${CONTEXT_ROUTE}/`, (req, res) => {
+  return res.sendStatus(204);
+})
+
 app.get(`${CONTEXT_ROUTE}/metrics`, (req, res) => {
   return res.send(client.register.metrics())
 })
