@@ -21,9 +21,6 @@ spec:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
-        env:
-        - name: PORT
-          value: {{ .Values.service.internalPort }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
